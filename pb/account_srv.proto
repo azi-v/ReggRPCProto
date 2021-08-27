@@ -1,0 +1,25 @@
+syntax = "proto3";
+package tutorial;
+
+import "google/protobuf/timestamp.proto";
+
+message RegisterReq{
+    string mobile = 1;//手机号
+    string email = 2;//邮件地址
+    map<string,string> DeviceInfo = 4;//设备信息:设备唯一id、系统信息，踢线用
+    string AppVersion =5;//APP版本
+    uint32 ChannelNo =6; //渠道号
+    string Vcode =7;//验证码
+    string PassWD =8;//密码
+    string LoginFactor =9; //登录因子
+}
+
+message RegisterResp{
+    string token =1; //JWT:与设备有关、有过期时间、包含userid、等其他信息
+}
+
+service Account {
+    rpc Login(RegisterReq) returns (RegisterResp){} //登录与注册
+}
+
+
