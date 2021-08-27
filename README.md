@@ -26,7 +26,7 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 ## protocl buf
 
-地址:<>
+地址:<https://github.com/azi-v/ReggRPCProto/blob/main/pb/account_srv.proto>
 
 ## 服务设计方案
 
