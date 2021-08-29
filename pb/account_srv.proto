@@ -1,7 +1,6 @@
 syntax = "proto3";
 package tutorial;
-
-import "google/protobuf/timestamp.proto";
+option go_package = "https://github.com/azi-v/ReggRPCProto/tree/main/pb";
 
 message RegisterReq{
     string mobile = 1;//手机号
